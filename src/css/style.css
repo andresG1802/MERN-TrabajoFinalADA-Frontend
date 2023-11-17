@@ -1,0 +1,72 @@
+/* En tu archivo CSS */
+body{
+  background-image: url('https://s1.1zoom.me/b5232/342/Passenger_Airplanes_Front_Takeoff_559605_1920x1080.jpg');
+}
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4c4faf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #056fe1;
+  }
+  
+  /* Agrega estilos adicionales según sea necesario */
+  
+/* MyComponent.css */
+
+.table-container {
+  width: 300px; /* Ajusta según sea necesario */
+  margin: 20px; /* Ajusta según sea necesario */
+  box-shadow: 0 4px 8px rgba(169, 20, 20, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px; /* Ajusta según sea necesario */
+  background-color: rgb(234, 240, 238);
+}
+
+.my-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e8e0e0;
+}
+
+.my-table th, .my-table td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+.my-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
