@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 import { TableJourneys } from './TableJourneys';
+import DijkstraForm from './DijkstraForm';
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -17,10 +19,11 @@ const App = () => {
   };
 
   return (
+
     <div>
       {loggedInUser ? (
         <div>
-          <TableJourneys></TableJourneys>
+          <DijkstraForm></DijkstraForm>
         </div>
       ) : (
         <div>

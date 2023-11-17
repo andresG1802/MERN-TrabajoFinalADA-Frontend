@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 const RegisterForm = ({ onRegister }) => {
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,6 +17,8 @@ const RegisterForm = ({ onRegister }) => {
       
       const data = await response.json();
       onRegister(data); // Envía los datos al componente principal
+    
+      // history.pushState('login');
     } catch (error) {
       console.error('Error al registrarse:', error);
     }
@@ -24,6 +26,7 @@ const RegisterForm = ({ onRegister }) => {
 
   return (
     <form onSubmit={handleRegister}>
+      <h1>Registro</h1>
       {/* <label>
         Username:
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />

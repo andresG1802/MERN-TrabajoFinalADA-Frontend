@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 const LoginForm = ({ onLogin }) => {
+  
   const [correo, setCorreo] = useState('');
   const [password, setPassword] = useState('');
 
@@ -21,9 +21,9 @@ const LoginForm = ({ onLogin }) => {
       console.error('Error al iniciar sesión:', error);
     }
   };
-
   return (
     <form onSubmit={handleLogin}>
+      <h1>Login</h1>
       <label>
         Correo:
         <input type="text" value={correo} onChange={(e) => setCorreo(e.target.value)} />
