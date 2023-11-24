@@ -16,7 +16,12 @@ const LoginForm = ({ onLogin }) => {
       });
 
       const data = await response.json();
-      onLogin(data); // Envía los datos al componente principal
+      //Si la respuesta esta bien
+      if(response.ok)
+      {
+        //Pasas
+        onLogin(data); // Envía los datos al componente principal
+      }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
     }
