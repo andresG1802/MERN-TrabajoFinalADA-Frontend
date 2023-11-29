@@ -5,7 +5,10 @@ import { TableComponent } from './TableComponent';
 const DijkstraForm = () => {
   const [origen, setOrigen] = useState('');
   const [destino, setDestino] = useState('');
+  
   const [resultado, setResultado] = useState(null);
+  const [ruta,setRuta] = useState([]);
+
   const [id1, setid1] = useState(null);
   const [lugar1, setlugar1] = useState(null);
   const [beneficio_ambiental1, setbeneficio_ambiental1] = useState(null);
@@ -39,6 +42,7 @@ const DijkstraForm = () => {
       });
       const data = await response.json();
       setResultado(data.caminoMasCorto);
+      setRuta(data.ruta);
       const response2 = await fetch('http://localhost:8080/api/aterrizaje/', {
         method: 'POST',
         headers: {
@@ -135,6 +139,14 @@ const DijkstraForm = () => {
       {resultado !== null && (
         <div style={DijkstraFormStyles.resultContainer}>
           <p id="parrafoDijkstra"style={DijkstraFormStyles.resultText}>Ruta minima calculada en kilometros: {resultado} km</p>
+            <div>
+              <h1>Ruta hecha:</h1>
+              <ul>
+                {ruta.map((paso, index) => (
+                  <li key={index}>{paso}</li>
+                ))}
+              </ul>
+            </div>
           <div className="tableContainer">
             <h2>Documentacion de Destino</h2>
             <table border="1">
